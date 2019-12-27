@@ -16,7 +16,5 @@
     "url": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1/issues"
   },
   "homepage": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1#readme",
-  "dependencies": {
-    "bootstrap": "^4.4.1"
-  }
+  "dependencies": {}
 }
