@@ -1,6 +1,7 @@
     let currentTurn = 'O';
     let ticTacTouBoard = [[1,2,3],[4,5,6],[7,8,9]];
     let done = false;
+    let playingCount = 0;
 
     let playerX = {
         elemetRef : document.getElementById('playerX'),
@@ -29,6 +30,8 @@
         if(!done){
          let eleTurn = elemet.textContent;
             if( eleTurn !== 'X' && eleTurn !=='O' ){
+                playingCount++;
+                console.log(playingCount)
               switchTurn(currentTurn);
               elemet.textContent = currentTurn;
               ticTacTouBoard[elemet.id[0]][elemet.id[1]] = currentTurn;
@@ -45,6 +48,10 @@
                   playerO.elemetRef.textContent = playerO.playerName + ' : '+ playerO.count;                  
                 }
             }
+        }
+        
+        if (playingCount >= 9 && !done) {
+            alert('its a Draw \n Press Reset')
         }
     }
     
@@ -82,19 +89,27 @@
     }
 
     function resetGame() {
-        if(done){
-      currentTurn = 'O';
-      ticTacTouBoard = [[1,2,3],[4,5,6],[7,8,9]];
-      done = false;
-      document.getElementById('00').textContent = 1;
-      document.getElementById('01').textContent = 2;
-      document.getElementById('02').textContent = 3;
-      document.getElementById('10').textContent = 4;
-      document.getElementById('11').textContent = 5;
-      document.getElementById('12').textContent = 6;
-      document.getElementById('20').textContent = 7;
-      document.getElementById('21').textContent = 8;
-      document.getElementById('22').textContent = 9;
+
+        if(done || playingCount >= 9){
+
+            if(playerX.count > playerO.count)
+             currentTurn = 'O';
+             else
+             currentTurn = 'X';
+
+
+             ticTacTouBoard = [[1,2,3],[4,5,6],[7,8,9]];
+             done = false;
+             playingCount=0;
+             document.getElementById('00').textContent = 1;
+             document.getElementById('01').textContent = 2;
+             document.getElementById('02').textContent = 3;
+             document.getElementById('10').textContent = 4;
+             document.getElementById('11').textContent = 5;
+             document.getElementById('12').textContent = 6;
+             document.getElementById('20').textContent = 7;
+             document.getElementById('21').textContent = 8;
+             document.getElementById('22').textContent = 9;
         }
 
     }
