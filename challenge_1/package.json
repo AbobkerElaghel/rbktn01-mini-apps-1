@@ -1,0 +1,22 @@
+{
+  "name": "tic_tac_tou",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbobkerElaghel/rbktn01-mini-apps-1.git"
+  },
+  "author": "Abobker Elaghel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1/issues"
+  },
+  "homepage": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}
