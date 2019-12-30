@@ -37,9 +37,9 @@ let userSchema = mongoose.Schema({
 let User = mongoose.model('User', userSchema);
 
   
-let save = (repoe) => {
+let save = (user) => {
   return new Promise((resolve,reject)=>{
-    var data = new Repo(repoe)
+    var data = new User(user)
     data.save((err,res)=>{
       if(err){
         reject(err)
@@ -51,24 +51,4 @@ let save = (repoe) => {
  
 }
 
-let saveAll = (repoes) => {
-  return new Promise((resolve,reject)=>{
-    Repo.collection.insertMany(repoes,function(err,res){
-      if(err){
-        reject(err)
-      }else{
-        resolve(res)
-      }
-    })
-
-  })
-
-}
-
-let findRepo = (userName)=>{
- return Repo.find({userName:userName}) 
-}
-
 module.exports.save = save;
-module.exports.saveAll = saveAll;
-module.exports.findRepo = findRepo;
