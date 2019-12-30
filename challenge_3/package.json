@@ -1,0 +1,26 @@
+{
+  "name": "multistep-checkout-experience",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "go": "./node_modules/.bin/babel client --out-dir public --presets @babel/preset-react --source-maps inline --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbobkerElaghel/rbktn01-mini-apps-1.git"
+  },
+  "author": "Abobker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1/issues"
+  },
+  "homepage": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1#readme",
+  "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-react": "^7.7.4"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "csvreportgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbobkerElaghel/rbktn01-mini-apps-1/tree/master/challenge_2"
+  },
+  "author": "Abobker",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "live-server": "^1.2.1",
+    "nodemon": "^2.0.2",
+    "urlencoded-parser": "^1.0.0"
+  }
+}
