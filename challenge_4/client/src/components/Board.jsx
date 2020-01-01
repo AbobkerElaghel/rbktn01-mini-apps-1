@@ -23,28 +23,27 @@ class Board extends React.Component {
 
  
  toggleBoard(element){
-     debugger;
      if(!this.state.done){
         let row  = parseInt( element.target.id.slice(0,1) );
         let column  = parseInt( element.target.id.slice(1) );
     
     
         if( row === 5 || this.checkEligiblety(row,column) ){
-           alert(row +' '+column)
+           
             if(this.state.toggle[row][column] === undefined){
                 if(this.state.globalCounter === true){
 
                     this.state.toggle[row][column] = true;
                     
                     element.target.style.backgroundColor = 'red'
-
-                    if (this.checkHorizantally(this.state.globalCounter,row,column)){
+                   
+                    if ( this.checkHorizantally(this.state.globalCounter ,row ,column) ){
                         alert('RED WINS');
                         this.setState({done:true});
                     }
                     this.setState({globalCounter:false});
                 }else{
-                    this.state.toggle [row][column] = false;
+                    this.state.toggle[row][column] = false;
                     this.setState({globalCounter:true});
                     element.target.style.backgroundColor = 'blue'
                 }
@@ -55,18 +54,31 @@ class Board extends React.Component {
 
 //if True red,False Blue
 checkHorizantally(color,row,column){
+   
     let scoreCounter = 0;
+    
+    
     //checks Right
-    for (let i = column; i < 7-column; i++) {
+    for (let i = column; i < 7; i++) {
+        console.log(i)
+
         if(this.state.toggle[row][i] === color)
         scoreCounter++;
-    }
-    for (let i = 0; i < column-1; i++) {
-        if(this.state.toggle[row][i] === color)
-        scoreCounter++;
+        else 
+        break;
+        
     }
 
+    console.log(scoreCounter)
     return scoreCounter >= 4;
+
+    //checks Lift
+    // for (let i = 0; i <= column; i++) {
+    //     if(this.state.toggle[row][i] === color)
+    //     scoreCounter++;
+    // }
+    // console.log(this.state.toggle)
+   
 }
 
 
