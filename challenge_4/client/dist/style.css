@@ -10,9 +10,11 @@ body {
 
 .element{
     border-radius: 50%;
-    color: #00f;
+    color: rgb(0, 0, 255);
     border-style: solid;
     border-color: yellow;
+    height: 100px;
+    width: 150px;
 
 }
 
