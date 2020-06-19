@@ -6,7 +6,7 @@ function sendDate(e){
         type: 'POST',
         data: $('JSO').value,
         contentType: 'text/html',
-        success: console.log('الحبببب'),
+        success: console.log('success'),
         
       });
 }
@@ -20,7 +20,7 @@ function getData(e){
         type: 'POST',
         data: $('JSO').value,
         contentType: 'text/html',
-        success: console.log('الحبببب'),
+        success: console.log('error'),
         
       });
 }
